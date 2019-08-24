@@ -1,0 +1,21 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voa2000/notes-app.git"
+  },
+  "keywords": [],
+  "author": "Vivienne Owusu-Ansah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/voa2000/notes-app/issues"
+  },
+  "homepage": "https://github.com/voa2000/notes-app#readme"
+}
