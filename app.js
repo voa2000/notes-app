@@ -1,7 +1,6 @@
-const validator = require("validator");
 const chalk = require("chalk");
-const getNotes = require("./notes");
 const yargs = require("yargs");
+const getNotes = require("./notes.js");
 
 // Customize yargs version
 yargs.version("1.1.0");
@@ -10,7 +9,7 @@ yargs.version("1.1.0");
 yargs.command({
   command: "add",
   describe: "Add a new note",
-  handler: {
+  builder: {
     title: {
       describe: "Note title",
       demandOption: true,
@@ -23,8 +22,8 @@ yargs.command({
     }
   },
   handler: function(argv) {
-    console.log("Title: ", argv.title);
-    console.log("Body: ", argv.body);
+    console.log("Title: " + argv.title);
+    console.log("Body: " + argv.body);
   }
 });
 
@@ -55,14 +54,4 @@ yargs.command({
   }
 });
 
-console.log(yargs.argv);
-
-// if (command === "add") {
-//     console.log("Adding operation selected");
-//     if (argv.title>0){console.log(object);}
-// } else if (command === "sub") {
-//   console.log("Subtracting operation selected");
-// } else {
-//   console.log("Invalid command");
-// }
-// console.log(title);
+yargs.parse();
